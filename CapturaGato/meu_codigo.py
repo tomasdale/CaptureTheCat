@@ -147,7 +147,7 @@ def bloquearCasa (grafo, caminho, outrasSaidas):
     
     Mod.blocks.append(melhorBlock)
     print (melhorBlock)    
-    executarDJKSearch() #chamada recursiva para teste
+    #executarDJKSearch() #chamada recursiva para teste
         
 
 def executarDJKSearch():
@@ -156,22 +156,11 @@ def executarDJKSearch():
     saidas = Mod.exits
     melhorCaminho = calculoMenorCaminho(grafo, b, Mod.exits)
     if len(melhorCaminho) == 0:
-        print("Gato preso")
+       # print("Gato preso")
         return 0
     else:
         saidas.remove(melhorCaminho[-1])
         bloquearCasa(grafo, melhorCaminho, saidas)
-    
-    melhorCaminho = calculoMenorCaminho(grafo, b, Mod.exits)
-    if len(melhorCaminho) == 0:
-        print("Gato preso")
-        return 0
-    else:
-        b = melhorCaminho[0]
-    if b in Mod.exits:
-        print("Loser")
-        return 0
-    
      
 
 

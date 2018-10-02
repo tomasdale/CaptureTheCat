@@ -4,7 +4,7 @@ import subprocess
 from PIL import Image, ImageDraw
 
 DEBUG     = True
-ANIMATION = True
+ANIMATION = False
 
 cat    = eval(sys.argv[1])
 blocks = eval(sys.argv[2])
@@ -99,21 +99,25 @@ def valid_move_catcher(cat, catcher, blocks, exits) :
 def valid_move_cat(cat, direction, blocks, exits) :
     if not direction :
         if DEBUG :
+            print(cat)
             print("Cat did not move and got caught")        
         return "loss"
     
     if not direction in ["NW", "NE", "W", "E", "SW", "SE"] :
         if DEBUG :
+            print(direction)
             print("Cat makes an unintelligible move")
         return "loss"
 
     cat = make_move(cat, direction)
     if cat in blocks :
         if DEBUG :
+            print(cat)
             print("Cat hits the block")
         return "loss"
     if cat in exits :
         if DEBUG :
+            print(cat)
             print("Cat runs away")
         return "win"
 
@@ -128,14 +132,14 @@ while True :
     if DEBUG :
         print("###### Blocks: %s" % str(blocks))
     
-    catcher_output = subprocess.Popen(['python', 'pegador.py', str(cat), str(blocks), str(exits)], stdout=subprocess.PIPE).communicate()[0].rstrip()
+    catcher_output = subprocess.Popen(['python', 'meu_codigo.py', str(cat), str(blocks), str(exits)], stdout=subprocess.PIPE).communicate()[0].rstrip()
     catcher = valid_move_catcher(cat, catcher_output, blocks, exits)
     if catcher == "loss" :
         print("0")
         break
     elif DEBUG :
         print("CATCHER = %s" % str(catcher))
-    blocks.append(catcher)
+    blocks.append(catcher)      
     
     if ANIMATION :
         images.append(compute_image(cat, blocks, exits))
