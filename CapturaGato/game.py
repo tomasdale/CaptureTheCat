@@ -79,6 +79,8 @@ def generate_random(used) :
     return candidate
 
 def valid_move_catcher(cat, catcher, blocks, exits) :
+
+    print("asdfasdfasdfasdf " , catcher)
     try :
         catcher = tuple(eval(catcher)[:2])
     except :
@@ -147,7 +149,7 @@ while True :
 
     
     cat_output = subprocess.Popen(['python', 'gato.py', str(cat), str(blocks), str(exits)],
-                                  stdout=subprocess.PIPE).communicate()[0].rstrip()
+                                  stdout=subprocess.PIPE).communicate()[0].rstrip().decode("utf-8")
 
 
     cat = valid_move_cat(cat, cat_output, blocks, exits) 
