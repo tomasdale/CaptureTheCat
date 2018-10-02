@@ -147,7 +147,7 @@ while True :
 
     
     cat_output = subprocess.Popen(['python', 'gato.py', str(cat), str(blocks), str(exits)],
-                                  stdout=subprocess.PIPE).communicate()[0].rstrip()
+                                  stdout=subprocess.PIPE).communicate()[0].rstrip().decode("UTF-8")
 
 
     cat = valid_move_cat(cat, cat_output, blocks, exits) 
