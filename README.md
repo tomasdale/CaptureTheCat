@@ -16,17 +16,19 @@ This is a project made for "Resoluçao de Problemas" class, it is a game by now 
  
   
 
-To the 1st case - You`re the Cat
-    _You will lose the game if:_
+**To the 1st case - You're the Cat**
+    **_You will lose the game if:_**
         - Your cat goes out of the table range
         - Your cat will go some blocked place
-    _If your cat arive some exit you **WIN** the game_
+    **_You will WIN the game when_**
+        -You cat arive some exit
     _You are aware of the number of steps you need to reach the closest exit_
         - Your score is based on how far you are from the ideal number of steps.
 
-To the 2nd case - You`re the Table
-    _You will Lose the game if:_
+**To the 2nd case - You`re the Table**
+    **_You will Lose the game if:_**
         - The cat can reach some of the exits
         - You don`t make a move
-    _If the cat can't reach any exit you **WIN** the game_
+    **_You wil WIN the game when_**
+        - The cat can't reach any exit
 
