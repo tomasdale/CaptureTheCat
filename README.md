@@ -5,7 +5,7 @@ Executar o arquivo com extensão .bat para rodar
 
 This is a project made for "Resoluçao de Problemas" class, it is a game by now diveded on 2 stages
 
-**1st - You are the cat and need to scape from the mat**
+**1st - You are the cat and need to scape from the mat** \n
 **2nd - You are the mat and your mission is capture another cat**
 
 
@@ -13,8 +13,6 @@ This is a project made for "Resoluçao de Problemas" class, it is a game by now 
  - The table consists of a grid / matrix 11x11
  - This table contens some BLOCKED places where the cat can`t go
  - This table also contains EXITS where the cat can escape and WIN
- 
-  
 
 **To the 1st case - You're the Cat**
     **_You will lose the game if:_**
