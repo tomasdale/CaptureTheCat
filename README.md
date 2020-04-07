@@ -8,6 +8,10 @@ This is a project made for "Resoluçao de Problemas" class, it is a game by now 
 **1st - You are the cat and need to scape from the mat**\
 **2nd - You are the mat and your mission is capture another cat**\
 
+**My Resolutions**
+ - Used Dijkstra's algorithm, so the cat always run to the closest exit.
+ - To the 2nd I have used the same algorithm so the mat will always try to block the closest exit for the cat.
+ 
 
 **_Some game informations:_**
  - The table consists of a grid / matrix 11x11
